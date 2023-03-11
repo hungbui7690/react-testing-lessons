@@ -1,7 +1,27 @@
 /*
-  Rendering the List of Users P2
+  Element Query System 
+  - pic > explanation 
 
-  (1) create UserList.js
+/////////////////////////////////
+
+Understanding ARIA Roles
+- pic
+
+/////////////////////////////////
+
+  Understanding Jest Matchers
+  - pic
+  - expect(inputs).[ toHaveLength(2) ] 
+    > toHaveLength === matcher
+
+/////////////////////////////////
+
+  Simulating User Events
+  > pic
+
+  (1) UserForm.test.js
+
+
 */
 
 import { useState } from 'react'
