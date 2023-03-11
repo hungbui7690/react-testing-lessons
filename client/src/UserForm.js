@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-// (4)
 const UserForm = ({ onUserAdd }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -8,7 +7,7 @@ const UserForm = ({ onUserAdd }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    onUserAdd({ name, email }) // (5)
+    onUserAdd({ name, email })
   }
 
   return (

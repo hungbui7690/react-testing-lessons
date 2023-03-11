@@ -1,24 +1,27 @@
 /*
-  Rendering the List of Users P1
+  Rendering the List of Users P2
 
+  (1) create UserList.js
 */
 
 import { useState } from 'react'
 import UserForm from './UserForm'
+import UserList from './UserList'
 
 function App() {
-  // (1)
   const [users, setUsers] = useState([])
 
-  // (2)
   const onUserAdd = (user) => {
     setUsers([...users, user])
   }
 
   return (
     <div className='container'>
-      {/* (3) */}
       <UserForm onUserAdd={onUserAdd} />
+      <hr />
+
+      {/* (2) */}
+      <UserList users={users} />
     </div>
   )
 }
