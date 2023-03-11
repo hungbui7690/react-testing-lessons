@@ -1,14 +1,10 @@
 /*
-  Recording Function Calls P1
+  Recording Function Calls P2
   
   (1) UserForm.test.js
 
-  (***) after running test > "w" > "p" to filter
-    > pic: filter-test
-
-  
-  >> right now, there is an error about onUserAdd() 
-    > this is because we test on UserForm only > and we just render <UserForm/>, without <App/> > onUserAdd() === undefined 
+  > after fixing, this test is passed > but it doesn't meet our goal
+  > our goal is to make sure onUserAdd is called with email/name
 
 */
 

@@ -12,11 +12,10 @@ test('it shows 2 inputs and 1 button', () => {
   expect(button).toBeInTheDocument()
 })
 
-// (***)
 test('it calls onUserAdd when the form is submitted', () => {
   // NOT THE BEST IMPLEMENTATION
-  // render
-  render(<UserForm />)
+  // render (***) FIX HERE > use empty arrow fn
+  render(<UserForm onUserAdd={() => {}} />)
 
   // find the 2 inputs
   const [nameInput, emailInput] = screen.getAllByRole('textbox')
