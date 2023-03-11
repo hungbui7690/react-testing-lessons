@@ -1,15 +1,24 @@
 /*
-  Handling User Input  
+  Rendering the List of Users P1
 
-  (1) UserForm.js
 */
 
+import { useState } from 'react'
 import UserForm from './UserForm'
 
 function App() {
+  // (1)
+  const [users, setUsers] = useState([])
+
+  // (2)
+  const onUserAdd = (user) => {
+    setUsers([...users, user])
+  }
+
   return (
     <div className='container'>
-      <UserForm />
+      {/* (3) */}
+      <UserForm onUserAdd={onUserAdd} />
     </div>
   )
 }
