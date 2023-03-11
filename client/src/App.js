@@ -1,26 +1,14 @@
 /*
-  Element Query System 
-  - pic > explanation 
-
-/////////////////////////////////
-
-Understanding ARIA Roles
-- pic
-
-/////////////////////////////////
-
-  Understanding Jest Matchers
-  - pic
-  - expect(inputs).[ toHaveLength(2) ] 
-    > toHaveLength === matcher
-
-/////////////////////////////////
-
-  Simulating User Events
-  > pic
-
+  Recording Function Calls P1
+  
   (1) UserForm.test.js
 
+  (***) after running test > "w" > "p" to filter
+    > pic: filter-test
+
+  
+  >> right now, there is an error about onUserAdd() 
+    > this is because we test on UserForm only > and we just render <UserForm/>, without <App/> > onUserAdd() === undefined 
 
 */
 

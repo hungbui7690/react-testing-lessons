@@ -29,8 +29,11 @@ test('it calls onUserAdd when the form is submitted', () => {
   user.click(emailInput)
   user.keyboard('jane@gmail.com')
 
-  // (***) CONT IN NEXT LESSON
   // find the button
+  const button = screen.getByRole('button')
+
   // sim clicking button
+  user.click(button)
+
   // assertion to making 'onUserAdd' gets called with email/name
 })
