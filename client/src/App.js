@@ -1,13 +1,9 @@
 /*
-  Adding the Form
-  > pic: requirement
+  Handling User Input  
 
-  (1) create UserForm.js
-
-  
+  (1) UserForm.js
 */
 
-// (2)
 import UserForm from './UserForm'
 
 function App() {

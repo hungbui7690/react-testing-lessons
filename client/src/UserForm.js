@@ -1,16 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-// (1) App.js
 const UserForm = () => {
+  // (1)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+
+  // (3)
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(name, email)
+  }
+
   return (
-    <form>
+    // (2)
+    <form onSubmit={handleSubmit}>
       <div className='form-row'>
         <label>Name</label>
-        <input />
+        <input
+          value={name} // (a)
+          onChange={(e) => {
+            setName(e.target.value) // (b)
+          }}
+        />
       </div>
       <div className='form-row'>
         <label>Email</label>
-        <input />
+        <input
+          value={email} // (a)
+          onChange={(e) => {
+            setEmail(e.target.value) // (b)
+          }}
+        />
       </div>
       <button>Add User</button>
     </form>
