@@ -8,6 +8,10 @@ const UserForm = ({ onUserAdd }) => {
     e.preventDefault()
 
     onUserAdd({ name, email })
+
+    // (***) test again
+    setName('')
+    setEmail('')
   }
 
   return (

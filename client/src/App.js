@@ -1,10 +1,7 @@
 /*
-  A Touch of Test Driven Development
-  - go to browser > add a user 
-  - after added, the fields in the form are not cleared
-    > we want to make the test on this first, before making the app
+  Feature Implementation
     
-  (1) UserForm.test.js
+  (1) UserForm.js
 
 */
 
