@@ -17,7 +17,6 @@ test('it calls onUserAdd when the form is submitted', () => {
 
   render(<UserForm onUserAdd={mock} />)
 
-  // (***) role === textbox > we just add options to search by name
   const nameInput = screen.getByRole('textbox', { name: /name/i })
   const emailInput = screen.getByRole('textbox', { name: /email/i })
 
@@ -32,4 +31,25 @@ test('it calls onUserAdd when the form is submitted', () => {
 
   expect(mock).toHaveBeenCalled()
   expect(mock).toHaveBeenCalledWith({ name: 'jane', email: 'jane@gmail.com' })
+})
+
+// (***)
+test('empties the two inputs when form is submitted', () => {
+  // we don't care about onUserAdd > leave it like this
+  render(<UserForm onUserAdd={() => {}} />)
+
+  const nameInput = screen.getByRole('textbox', { name: /name/i })
+  const emailInput = screen.getByRole('textbox', { name: /email/i })
+
+  user.click(nameInput)
+  user.keyboard('jane')
+
+  user.click(emailInput)
+  user.keyboard('jane@gmail.com')
+
+  const button = screen.getByRole('button')
+  user.click(button)
+
+  expect(nameInput).toHaveValue('')
+  expect(emailInput).toHaveValue('')
 })

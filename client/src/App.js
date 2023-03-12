@@ -1,7 +1,10 @@
 /*
-  Testing the Whole App P2
+  A Touch of Test Driven Development
+  - go to browser > add a user 
+  - after added, the fields in the form are not cleared
+    > we want to make the test on this first, before making the app
     
-  (1) App.test.js
+  (1) UserForm.test.js
 
 */
 
