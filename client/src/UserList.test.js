@@ -7,10 +7,17 @@ test('render 1 row per user', () => {
     { name: 'jane', email: 'jane@gmail.com' },
     { name: 'sam', email: 'sam@gmail.com' },
   ]
-  render(<UserList users={users} />)
 
-  // (***) fallback #1: use data-testid > this one is not good, since we have to modify react code
-  const rows = within(screen.getByTestId('user')).getAllByRole('row')
+  // (1) save in container
+  const { container } = render(<UserList users={users} />)
+
+  // (2)
+  // const table = container.querySelector('table')
+  // console.log(table)
+
+  // (3)
+  // eslint-disable-next-line
+  const rows = container.querySelectorAll('tbody tr')
 
   expect(rows).toHaveLength(2)
 })

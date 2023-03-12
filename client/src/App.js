@@ -1,11 +1,18 @@
 /*
-  Query Function Escape Hatches
-  > pic: escape hatchers
-  > 2 fallbacks
-
+  Another Query Function Fallback
+  - fallback #2
+    > prefer to use fallback#1 > no eslint
   
-  (1) UserList.js
+  (1) UserList.test.js
 
+
+  (***) need to enable eslint extensions + config in package.json
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
 
 */
 

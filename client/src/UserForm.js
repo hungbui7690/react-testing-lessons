@@ -13,7 +13,6 @@ const UserForm = ({ onUserAdd }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className='form-row'>
-        {/* (***) */}
         <label htmlFor='name'>Name</label>
         <input
           id='name'
@@ -24,7 +23,6 @@ const UserForm = ({ onUserAdd }) => {
         />
       </div>
       <div className='form-row'>
-        {/* (***) add htmlFor + id > click on label will focus on input  */}
         <label htmlFor='email'>Email</label>
         <input
           id='email'
