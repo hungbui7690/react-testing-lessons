@@ -1,7 +1,6 @@
 import { render, screen, within } from '@testing-library/react'
 import UserList from './UserList'
 
-// (1) we use this many times > make this function to avoid code duplication
 function renderComponent() {
   const users = [
     { name: 'jane', email: 'jane@gmail.com' },
@@ -14,8 +13,12 @@ function renderComponent() {
   }
 }
 
+// (***) in jest and many frameworks, we have this function > this function will run before every test > good for initial setup > but in react-testing-lib: if we throw the render() in, we will get warning > don't use that though it is ok
+beforeEach(() => {
+  // render(<UserList />)
+})
+
 test('render 1 row per user', () => {
-  // (2)
   renderComponent()
 
   const rows = within(screen.getByTestId('users')).getAllByRole('row')
@@ -24,7 +27,6 @@ test('render 1 row per user', () => {
 })
 
 test('render the email and name for each user', () => {
-  // (3)
   const { users } = renderComponent()
 
   for (let user of users) {

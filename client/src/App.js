@@ -1,5 +1,5 @@
 /*
-  Avoiding BeforeEach P1
+  Avoiding BeforeEach P2
   
   (1) UserList.test.js
 
