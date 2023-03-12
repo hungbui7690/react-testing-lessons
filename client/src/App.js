@@ -1,5 +1,5 @@
 /*
-  Testing the UserList P1 & Testing Playground
+  Testing the UserList P2
   > pic: test-userlist
   
   (1) create UserList.test.js
