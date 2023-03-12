@@ -1,8 +1,8 @@
 /*
-  Recording Function Calls P3
+  Introducing Mock Functions
+  > pic
   
   (1) UserForm.test.js
-
 
 */
 
@@ -21,8 +21,6 @@ function App() {
     <div className='container'>
       <UserForm onUserAdd={onUserAdd} />
       <hr />
-
-      {/* (2) */}
       <UserList users={users} />
     </div>
   )
