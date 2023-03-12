@@ -1,7 +1,6 @@
 /*
-  Testing the Whole App P1
-  - test App.js
-  
+  Testing the Whole App P2
+    
   (1) App.test.js
 
 */

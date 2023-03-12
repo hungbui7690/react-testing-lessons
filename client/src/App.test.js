@@ -17,5 +17,10 @@ test('can receive a new user and show it on a list', () => {
 
   user.click(button)
 
-  screen.debug() // warning because after using, we should remove it > make sure in the log will show the row that we added
+  // (***)
+  const name = screen.getByRole('cell', { name: /name/i })
+  const email = screen.getByRole('cell', { name: /email/i })
+
+  expect(name).toBeInTheDocument()
+  expect(email).toBeInTheDocument()
 })
