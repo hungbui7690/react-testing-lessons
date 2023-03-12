@@ -1,10 +1,12 @@
 /*
-  Querying Elements by Labels
-  > pic: query-by-labels > 2 methods to get > recommendation by react-testing-lib: use getByRole()
-  - later, if we add more inputs > our test won't work 
+  Testing the UserList P1 & Testing Playground
+  > pic: test-userlist
   
-  (1) UserForm.[js]
-  (2) UserForm.test.js
+  (1) create UserList.test.js
+
+
+  - sometimes, we don't remember or don't know which functions we want to use to select the element 
+    > screen.logTestingPlaygroundURL()
 
 */
 
