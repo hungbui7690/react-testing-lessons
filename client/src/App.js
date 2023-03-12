@@ -1,7 +1,8 @@
 /*
-  Avoiding BeforeEach P2
+  Testing the Whole App P1
+  - test App.js
   
-  (1) UserList.test.js
+  (1) App.test.js
 
 */
 

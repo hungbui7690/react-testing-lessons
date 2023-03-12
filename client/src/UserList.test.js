@@ -13,11 +13,6 @@ function renderComponent() {
   }
 }
 
-// (***) in jest and many frameworks, we have this function > this function will run before every test > good for initial setup > but in react-testing-lib: if we throw the render() in, we will get warning > don't use that though it is ok
-beforeEach(() => {
-  // render(<UserList />)
-})
-
 test('render 1 row per user', () => {
   renderComponent()
 
