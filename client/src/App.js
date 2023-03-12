@@ -1,19 +1,7 @@
 /*
-  Another Query Function Fallback
-  - fallback #2
-    > prefer to use fallback#1 > no eslint
+  Testing Table Contents
   
-  (1) UserList.test.js
-
-
-  (***) need to enable eslint extensions + config in package.json
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-
+  
 */
 
 import { useState } from 'react'
