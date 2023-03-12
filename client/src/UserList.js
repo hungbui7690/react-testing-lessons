@@ -18,7 +18,9 @@ const UserList = ({ users }) => {
           <td>Email</td>
         </tr>
       </thead>
-      <tbody>{renderedUsers}</tbody>
+
+      {/* (***) all lowercase */}
+      <tbody data-testid='user'>{renderedUsers}</tbody>
     </table>
   )
 }

@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/react'
+// (***) import {within}
+import { render, screen, within } from '@testing-library/react'
 import UserList from './UserList'
 
 test('render 1 row per user', () => {
@@ -8,10 +9,9 @@ test('render 1 row per user', () => {
   ]
   render(<UserList users={users} />)
 
-  // (1)
-  const rows = screen.getAllByRole('row')
+  // (***) fallback #1: use data-testid > this one is not good, since we have to modify react code
+  const rows = within(screen.getByTestId('user')).getAllByRole('row')
 
-  // (2) Assertion: correct number of rows in the table > failed: because it contains the header
   expect(rows).toHaveLength(2)
 })
 

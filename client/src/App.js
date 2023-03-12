@@ -1,12 +1,11 @@
 /*
-  Testing the UserList P2
-  > pic: test-userlist
+  Query Function Escape Hatches
+  > pic: escape hatchers
+  > 2 fallbacks
+
   
-  (1) create UserList.test.js
+  (1) UserList.js
 
-
-  - sometimes, we don't remember or don't know which functions we want to use to select the element 
-    > screen.logTestingPlaygroundURL()
 
 */
 
