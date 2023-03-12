@@ -1,10 +1,8 @@
 /*
-  Recording Function Calls P2
+  Recording Function Calls P3
   
   (1) UserForm.test.js
 
-  > after fixing, this test is passed > but it doesn't meet our goal
-  > our goal is to make sure onUserAdd is called with email/name
 
 */
 

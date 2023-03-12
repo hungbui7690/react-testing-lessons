@@ -14,25 +14,29 @@ test('it shows 2 inputs and 1 button', () => {
 
 test('it calls onUserAdd when the form is submitted', () => {
   // NOT THE BEST IMPLEMENTATION
-  // render (***) FIX HERE > use empty arrow fn
-  render(<UserForm onUserAdd={() => {}} />)
 
-  // find the 2 inputs
+  // (1)
+  const argList = []
+  const callback = (...args) => {
+    argList.push(args)
+  }
+
+  // (2) pass callback > ref only
+  render(<UserForm onUserAdd={callback} />)
+
   const [nameInput, emailInput] = screen.getAllByRole('textbox')
 
-  // sim typing in a name
   user.click(nameInput)
   user.keyboard('jane')
 
-  // sim typing in an email
   user.click(emailInput)
   user.keyboard('jane@gmail.com')
 
-  // find the button
   const button = screen.getByRole('button')
 
-  // sim clicking button
   user.click(button)
 
-  // assertion to making 'onUserAdd' gets called with email/name
+  // (3) assertion to making 'onUserAdd' gets called with email/name
+  expect(argList).toHaveLength(1)
+  expect(argList[0][0]).toEqual({ name: 'jane', email: 'jane@gmail.com' })
 })
