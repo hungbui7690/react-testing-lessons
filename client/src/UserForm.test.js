@@ -13,13 +13,13 @@ test('it shows 2 inputs and 1 button', () => {
 })
 
 test('it calls onUserAdd when the form is submitted', () => {
-  // (1)
   const mock = jest.fn()
 
-  // (2) pass here
   render(<UserForm onUserAdd={mock} />)
 
-  const [nameInput, emailInput] = screen.getAllByRole('textbox')
+  // (***) role === textbox > we just add options to search by name
+  const nameInput = screen.getByRole('textbox', { name: /name/i })
+  const emailInput = screen.getByRole('textbox', { name: /email/i })
 
   user.click(nameInput)
   user.keyboard('jane')
@@ -30,7 +30,6 @@ test('it calls onUserAdd when the form is submitted', () => {
   const button = screen.getByRole('button')
   user.click(button)
 
-  // (3)
   expect(mock).toHaveBeenCalled()
   expect(mock).toHaveBeenCalledWith({ name: 'jane', email: 'jane@gmail.com' })
 })

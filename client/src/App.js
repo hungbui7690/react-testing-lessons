@@ -1,8 +1,10 @@
 /*
-  Introducing Mock Functions
-  > pic
+  Querying Elements by Labels
+  > pic: query-by-labels > 2 methods to get > recommendation by react-testing-lib: use getByRole()
+  - later, if we add more inputs > our test won't work 
   
-  (1) UserForm.test.js
+  (1) UserForm.[js]
+  (2) UserForm.test.js
 
 */
 

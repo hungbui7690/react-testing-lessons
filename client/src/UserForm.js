@@ -13,8 +13,10 @@ const UserForm = ({ onUserAdd }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className='form-row'>
-        <label>Name</label>
+        {/* (***) */}
+        <label htmlFor='name'>Name</label>
         <input
+          id='name'
           value={name}
           onChange={(e) => {
             setName(e.target.value)
@@ -22,8 +24,10 @@ const UserForm = ({ onUserAdd }) => {
         />
       </div>
       <div className='form-row'>
-        <label>Email</label>
+        {/* (***) add htmlFor + id > click on label will focus on input  */}
+        <label htmlFor='email'>Email</label>
         <input
+          id='email'
           value={email}
           onChange={(e) => {
             setEmail(e.target.value)
